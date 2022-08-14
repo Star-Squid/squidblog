@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Julius+Sans+One&display=swap");
+
+:root {
+  --black: #3d4447;
+  --white: #f7eed3;
+  --grey: #838c74e1;
+  --halfgrey: #838c7463;
+
+  --main: #d37432;
+  --complement: #6e2f1d;
+  --accent: #6ba7ae;
+
+  --aura: radial-gradient(
+    circle at 50% 50%,
+    #6ba7ae,
+    #5ba8a0,
+    #5ba78a,
+    #69a46e,
+    #809e51,
+    #9b9438,
+    #b8872b,
+    #d37432
+  );
+
+  --glint: linear-gradient(135deg, #838c74e1 5%, #838c7463 30%, #838c74e1);
+  --lightglint: linear-gradient(135deg, #838c7463 5%, #838c7400 30%, #838c7463);
+
+  --scrollbarBG: #d37432;
+  --thumbBG: #6ba7ae;
+
+  --regular: clamp(1rem, 2vmin, 2rem);
+}
+
+html {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  margin-left: -0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  background: url("transparent-grain3.png"), var(--aura);
+  overflow-x: hidden;
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--black);
+  font-size: var(--regular);
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid var(--grey);
+  border-radius: 0 0 0.5rem 0;
+  background-color: var(--halfgrey);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.nav-item {
+  border-radius: 0.5rem;
+  padding: 1rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  letter-spacing: 0.01rem;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+  background-image: var(--glint);
+}
+
+.nav-item h2 {
+  margin: 0;
+}
+
+header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: 1px solid var(--grey);
+  border-width: 1px 0 0;
+  margin: 0;
+}
+
+.container {
+  width: 98%;
+  height: 98%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  margin: 0 auto;
+  width: 100%;
+
+  max-width: 750px;
+  padding: 0 0 2rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 95vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 1rem;
+  background-color: var(--white);
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 1rem;
+
+  flex-grow: 1;
+}
+
+.post {
+  flex-grow: 1;
+}
+
+h1 {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: calc(var(--regular) + 4vw);
+  margin: 2rem;
+}
+
+h2 {
+  margin: 2rem 0;
+}
+
+.date {
+  border-top: 1px solid var(--grey);
+  border-bottom: 1px solid var(--grey);
+  width: fit-content;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+}
+.move {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.move:hover {
+  cursor: pointer;
+  background-image: var(--lightglint);
+}
+
+footer {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+a {
+  color: var(--complement);
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:active {
+  color: var(--accent);
+}
+
+.singlepost {
+  padding: 1rem 1rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--halfgrey);
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.singlepost:hover {
+  cursor: pointer;
+  background-image: var(--glint);
+}
+
+.singlepost h2 {
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  nav {
+    width: 100%;
+    border-radius: 0;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+  }
+
+  .nav-item {
+    border-radius: 0;
+
+    border-left: 1px var(--grey) solid;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: horizontal-tb;
+    text-orientation: upright;
+    letter-spacing: 0.01rem;
+    flex-grow: 1;
+  }
+
+  .nav-item:hover {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-image: var(--glint);
+  }
+
+  .nav-item h2 {
+    margin: 0;
+  }
+
+  .column {
+    margin: 3rem 0 0;
+  }
+}
