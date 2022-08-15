@@ -4,6 +4,7 @@ $white: #f7eed3;
 $grey: #838c74e1;
 $halfgrey: #838c7463;
 
+
 $main: #d37432;
 $complement: #6e2f1d;
 $accent: #6ba7ae;
@@ -20,10 +21,12 @@ $aura: radial-gradient(
   #d37432
 );
 
-$glint: linear-gradient(135deg, #838c74e1 5%, #838c7463 30%, #838c74e1);
-$lightglint: linear-gradient(135deg, #838c7463 5%, #838c7400 30%, #838c7463);
+// $glint: linear-gradient(135deg, #838c74e1 5%, #838c7463 30%, #838c74e1);
+// $lightglint: linear-gradient(135deg, #838c7463 5%, #838c7400 30%, #838c7463);
+$glint: linear-gradient(#838c74e1, #838c74e1);
+$lightglint: linear-gradient(#838c7463, #838c7463);
 
-$scrollbarBG: #d37432;
-$thumbBG: #6ba7ae;
+$scrollbarBG: #f7eed3;
+$thumbBG: #6e2f1d;
 
 $regular: clamp(1rem, 2vmin, 2rem);
