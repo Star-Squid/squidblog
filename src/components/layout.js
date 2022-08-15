@@ -2,7 +2,8 @@ import React from "react"
 import Navigation from "./navigation"
 import Header from "./header"
 import Footer from "./footer"
-import * as LayoutStyles from "../styles/index.scss"
+import "../styles/index.scss"
+
 
 export default function Layout(props) {
   return (
