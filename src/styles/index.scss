@@ -47,26 +47,6 @@ nav {
   align-items: stretch;
 }
 
-// .nav-item {
-//   border-radius: 0.5rem;
-//   padding: 1rem 0.5rem;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   writing-mode: vertical-rl;
-//   text-orientation: upright;
-//   letter-spacing: 0.01rem;
-// }
-
-// .nav-item:hover {
-//   cursor: pointer;
-//   background-image: $glint;
-// }
-
-// .nav-item h2 {
-//   margin: 0;
-// }
-
 header {
   margin: 0 auto;
   display: flex;
@@ -220,32 +200,4 @@ li {
       margin: 3rem 0 0;
     }
   }
-
-  // .nav-item {
-  //   border-radius: 0;
-
-  //   border-left: 1px $grey solid;
-  //   padding: 0.5rem 1rem;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   writing-mode: horizontal-tb;
-  //   text-orientation: upright;
-  //   letter-spacing: 0.01rem;
-  //   flex-grow: 1;
-  // }
-
-  // .nav-item:hover {
-  //   border-radius: 0.5rem;
-  //   cursor: pointer;
-  //   background-image: $glint;
-  // }
-
-  // .nav-item h2 {
-  //   margin: 0;
-  // }
-
-  // .column {
-  //   margin: 3rem 0 0;
-  // }
 }
