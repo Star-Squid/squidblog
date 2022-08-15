@@ -3,14 +3,24 @@ import Layout from "../components/layout"
 import PostDate from "./postdate"
 import PostNav from "./postnav"
 
+//needed to target each individual post (target by the known slug)
+export const query = graphql`
+  query($slug: String!) {
+    contentfulBlogPost(slug: { eq: $slug }) {
+      title
+      publishedDate(formatString: "MMMM Do, YYYY")
+    }
+  }
+`
+
 export default function BlogPost(props) {
   return (
     <Layout>
 
 <div class="post">
-            <PostDate>{props.children.date}</PostDate>
+            <PostDate>{props.data.contentfulBlogPost.publishedDate}</PostDate>
             {/* <p class="date"><small>56/78/9833</small></p> */}
-            <h2>Here's a Post!</h2>
+            <h2>{props.data.contentfulBlogPost.title}</h2>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
               saepe quod quaerat doloremque

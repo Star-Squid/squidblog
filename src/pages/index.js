@@ -28,9 +28,10 @@ export default function IndexPage() {
 
 
         {data.allContentfulBlogPost.edges.map(edge => {
+          const thisslug = edge.node.slug
           return (
             <div className={postStyles.vignette}>
-            <Link to={edge.node.slug}>
+            <Link to={"blog/" + edge.node.slug}>
               <div className={postStyles.singlepost}>
                
                   <p>{edge.node.publishedDate}</p>
