@@ -7,11 +7,11 @@ export default function ContactPage() {
       <h2>Visit me elsewhere:</h2>
       <ul>
         <li>
-          <a href="">Web Portfolio</a>
+          <a href="https://star-squid.github.io/">Web Portfolio</a>
         </li>
-        <p>a collection of my learning projects</p>
+        <p>a collection of learning projects I've outgrown</p>
         <li>
-          <a href="">Star Squid Studio</a>
+          <a href="https://star-squid.art/">Star Squid Studio</a>
         </li>
         <p>art portfolio, the hub of the Star Squid universe</p>
         <li>
