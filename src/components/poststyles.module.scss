@@ -1,0 +1,32 @@
+@import "../styles/vars.scss";
+
+.vignette {
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover{
+    color: $black;
+  }
+
+  .singlepost {
+    padding: 1rem 1rem 1.5rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    background: $halfgrey;
+    // background: red;
+
+  }
+
+  .singlepost:hover {
+    cursor: pointer;
+    background-image: $glint;
+    // background: green;
+  }
+
+  .singlepost h2 {
+    margin: 0;
+  }
+}

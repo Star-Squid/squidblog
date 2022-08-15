@@ -159,21 +159,32 @@ a:active {
 }
 
 .singlepost {
-  padding: 1rem 1rem 1.5rem;
-  border-radius: 0.5rem;
-  background-color: $halfgrey;
-  width: 100%;
-  margin-top: 1rem;
+
+  background-color: var(--halfgrey);
+
 }
 
 .singlepost:hover {
-  cursor: pointer;
-  background-image: $glint;
+
+  background-image: var(--glint);
 }
 
-.singlepost h2 {
-  margin: 0;
-}
+// .singlepost {
+//   padding: 1rem 1rem 1.5rem;
+//   border-radius: 0.5rem;
+//   background-color: $halfgrey;
+//   width: 100%;
+//   margin-top: 1rem;
+// }
+
+// .singlepost:hover {
+//   cursor: pointer;
+//   background-image: $glint;
+// }
+
+// .singlepost h2 {
+//   margin: 0;
+// }
 
 ul {
   list-style-position: inside;
