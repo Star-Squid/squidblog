@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import PostDate from "./postdate"
 import PostNav from "./postnav"
 import { graphql } from "gatsby"
+import * as blogPostStyles from "./blogpoststyles.module.scss"
 
 //needed to target each individual post (target by the known slug)
 export const query = graphql`
@@ -20,14 +21,13 @@ export const query = graphql`
 export default function BlogPost(props) {
   return (
     <Layout>
-      <div class="post">
+      
         <PostDate>{props.data.contentfulBlogPost.publishedDate}</PostDate>
-        <h2>{props.data.contentfulBlogPost.title}</h2>
+        <h2 className={blogPostStyles.title}>{props.data.contentfulBlogPost.title}</h2>
         <p>
         {props.data.contentfulBlogPost.body.raw}
         </p>
-      </div>
-
+      
       <PostNav></PostNav>
     </Layout>
   )
