@@ -1,8 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 import * as navigationStyles from "./navigation.module.scss"
+// import SunIcon from "./sunicon"
+// import { useState } from "react"
 
-export default function Navigation() {
+export default function Navigation({handleClick}) {
   return (
     <nav>
       <div className={navigationStyles.navItem}>
@@ -34,10 +36,10 @@ export default function Navigation() {
           CONTACT
         </Link>
       </div>
-      <hr />
+      <hr/>
       <div className={navigationStyles.navItem}>
-        <h2 className={navigationStyles.link}>☼</h2>
-      </div>
+        <h2 onClick={handleClick}>☀</h2>
+              </div>
     </nav>
   )
 }

@@ -2,9 +2,9 @@ import React from "react"
 
 export default function PostNav() {
   return (
-    <div class="post-nav">
-      <div class="move newer">← newer</div>
-      <div class="move older">older →</div>
+    <div className="post-nav">
+      <div className="move newer">← newer</div>
+      <div className="move older">older →</div>
     </div>
   )
 }

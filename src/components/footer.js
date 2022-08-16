@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Footer() {
   return (
-    <footer class="footer">
+    <footer className="footer">
             <hr />
             Created by Barbara Malta © 2022
           </footer>

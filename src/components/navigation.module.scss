@@ -74,9 +74,13 @@
 }
 
 .active-nav-item::before {
-  content: "❈ ";
+  content: "▪ ";
 }
 
 .active-nav-item::after {
-  content: " ❈";
+  content: " ▪";
+}
+
+.theme-toggle{
+  font-weight: 800;
 }

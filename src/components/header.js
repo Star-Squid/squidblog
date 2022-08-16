@@ -4,7 +4,7 @@ import * as headerStyles from "./header.module.scss"
 
 export default function Header() {
   return (
-<header class="header">
+<header className="header">
           <h1><Link to="/" className={headerStyles.link}>Star&nbsp;Squid&nbsp;Blog</Link></h1>
         </header>
   )

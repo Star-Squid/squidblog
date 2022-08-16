@@ -3,19 +3,30 @@ import Navigation from "./navigation"
 import Header from "./header"
 import Footer from "./footer"
 import "../styles/index.scss"
+import {createContext, useState} from "react"
 
+export const ThemeContext = createContext(null);
 
 export default function Layout(props) {
+
+  const [theme, setTheme] = useState("light");
+  const toggleTheme = () => {
+    setTheme((current)=>(current === "light" ? "dark" : "light"))
+  };
+
   return (
-    <div class="container">
-      <Navigation />
-      <div class="column">
+    <ThemeContext.Provider value={{theme, toggleTheme}}>
+    <div className="container" id={theme}>
+      <Navigation handleClick={toggleTheme}/>
+      <div className="column">
         <Header />
-        <div class="content">
+        <div className="content">
           {props.children}
-          <Footer />
+          <Footer/>
+          <h2 onClick={toggleTheme}>☀</h2>
         </div>
       </div>
     </div>
+  </ThemeContext.Provider>
   )
 }
