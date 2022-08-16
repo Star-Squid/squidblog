@@ -36,10 +36,10 @@ export default function Navigation({handleClick}) {
           CONTACT
         </Link>
       </div>
-      <hr/>
+      {/* <hr/>
       <div className={navigationStyles.navItem}>
         <h2 onClick={handleClick}>☀</h2>
-              </div>
+              </div> */}
     </nav>
   )
 }

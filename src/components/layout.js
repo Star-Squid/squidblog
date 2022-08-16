@@ -1,32 +1,38 @@
-import React from "react"
+import React, { createContext, useState } from "react"
 import Navigation from "./navigation"
 import Header from "./header"
 import Footer from "./footer"
 import "../styles/index.scss"
-import {createContext, useState} from "react"
 
-export const ThemeContext = createContext(null);
+export const ThemeContext = createContext(null)
 
 export default function Layout(props) {
+  const [theme, setTheme] = useState("light")
 
-  const [theme, setTheme] = useState("light");
   const toggleTheme = () => {
-    setTheme((current)=>(current === "light" ? "dark" : "light"))
-  };
+    setTheme(current => (current === "light" ? "dark" : "light"))
+  }
+
+  // useEffect(() => {
+  //   setTheme(JSON.parse(window.localStorage.getItem('theme')));
+  // }, []);
+
+  // useEffect(() => {
+  //   window.localStorage.setItem('theme', theme);
+  // }, [theme]);
 
   return (
-    <ThemeContext.Provider value={{theme, toggleTheme}}>
-    <div className="container" id={theme}>
-      <Navigation handleClick={toggleTheme}/>
-      <div className="column">
-        <Header />
-        <div className="content">
-          {props.children}
-          <Footer/>
-          <h2 onClick={toggleTheme}>☀</h2>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="container" id={theme}>
+        <Navigation handleClick={toggleTheme} />
+        <div className="column">
+          <Header />
+          <div className="content">
+            {props.children}
+            <Footer />
+          </div>
         </div>
       </div>
-    </div>
-  </ThemeContext.Provider>
+    </ThemeContext.Provider>
   )
 }

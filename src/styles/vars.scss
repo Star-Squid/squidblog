@@ -4,6 +4,7 @@ $white: #f7eed3;
 $grey: #838c74e1;
 $halfgrey: #838c7463;
 
+$sand: #cca367;
 $main: #d37432;
 $complement: #6e2f1d;
 $accent: #6ba7ae;
@@ -31,14 +32,14 @@ $thumbBG: #6e2f1d;
 $regular: clamp(1rem, 2vmin, 2rem);
 
 // dark mode
-$darkaura: radial-gradient(
-  circle at 50% 50%,
-  #620141,
-  #660a29,
-  #601c17,
-  #542a0b,
-  #47340b,
-  #3a3a15,
-  #2f3f23,
-  #294131
-);
+// $darkaura: radial-gradient(
+//   circle at 50% 50%,
+//   #620141,
+//   #660a29,
+//   #601c17,
+//   #542a0b,
+//   #47340b,
+//   #3a3a15,
+//   #2f3f23,
+//   #294131
+// );
