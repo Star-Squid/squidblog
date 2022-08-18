@@ -3,6 +3,7 @@ import Layout from "../components/layout"
 import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 import * as postStyles from "../components/poststyles.module.scss"
+import { Seo } from "../components/seo"
 
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
@@ -46,3 +47,16 @@ export default function IndexPage() {
     </Layout>
   )
 }
+
+// export function Head() {
+//   return (
+//     <>
+//     <title>Star Squid Blog</title>
+//     <meta name="description" content="It's a blog! It's a squid!" />
+//     </>
+//   )
+// }
+
+export const Head = () => (
+  <Seo />
+)
