@@ -39,6 +39,6 @@ export default function BlogPost(props) {
   )
 }
 
-export const Head = props => (
-  <Seo title="{props.data.contentfulBlogPost.title} - Star Squid Blog" />
+export const Head = (props) => (
+  <Seo title={props.data.contentfulBlogPost.title + " - Star Squid Blog"} />
 )
