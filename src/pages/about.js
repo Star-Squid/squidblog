@@ -10,20 +10,21 @@ export default function AboutPage() {
         <ul>
           <li>
             Why is it called Star Squid Blog?
-            <p>Because Star Squid is a name I use online a lot</p>
+            <p>Star Squid is a name I use online a lot.</p>
           </li>
 
           <li>
             What's so cool about squid?
             <p>
-              They are intelligent, come in a range of sizes, are very cute with
-              their large eyes. They can change colours and textures of their
-              skin.
+              They are intelligent, come in a range of sizes, are very cute with their large eyes. They can change colours and textures of their skin.
+            </p>
+            <p>
+              Also, I used to have a cat called Squid and he was the coolest cat.
             </p>
           </li>
           <li>
-            Do you think you're such a star?
-            <p>Nah, "Cosmic squid" was already taken</p>
+            How do I grow long toenails?
+            <p>You need to pay a witch what you thinnk it's worth.</p>
           </li>
         </ul>
       </div>
