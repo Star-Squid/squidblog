@@ -48,15 +48,6 @@ export default function IndexPage() {
   )
 }
 
-// export function Head() {
-//   return (
-//     <>
-//     <title>Star Squid Blog</title>
-//     <meta name="description" content="It's a blog! It's a squid!" />
-//     </>
-//   )
-// }
-
 export const Head = () => (
   <Seo />
 )
