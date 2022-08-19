@@ -20,6 +20,20 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-    `gatsby-transformer-remark`
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: "Star Squid Blog",
+        short_name: "SSB",
+        description: "I post random thoughts as an excuse to play with web development concepts",
+        start_url: "/",
+        background_color: "#9b9438",
+        theme_color: "#3d4447",
+        display: "standalone",
+        icon: "src/images/icon.png", 
+        crossOrigin: `use-credentials`,
+      },
+    }
   ],
 }
