@@ -50,8 +50,6 @@
 
 @media (max-width: 860px) {
   .nav-item {
-    background-image: url("../images/transparent-grain.png"),
-      radial-gradient($halfgrey, $halfgrey);
     border-radius: 0;
 
     border-left: 1px $grey solid;
@@ -81,6 +79,6 @@
   content: " ▪";
 }
 
-.theme-toggle{
+.theme-toggle {
   font-weight: 800;
 }

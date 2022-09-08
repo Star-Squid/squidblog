@@ -21,25 +21,20 @@ $aura: radial-gradient(
   #d37432
 );
 
-// $glint: linear-gradient(135deg, #838c74e1 5%, #838c7463 30%, #838c74e1);
-// $lightglint: linear-gradient(135deg, #838c7463 5%, #838c7400 30%, #838c7463);
 $glint: linear-gradient(#838c74e1, #838c74e1);
 $lightglint: linear-gradient(#838c7463, #838c7463);
-
-$scrollbarBG: #f7eed3;
-$thumbBG: #6e2f1d;
 
 $regular: clamp(1rem, 2vmin, 2rem);
 
 // dark mode
-// $darkaura: radial-gradient(
-//   circle at 50% 50%,
-//   #620141,
-//   #660a29,
-//   #601c17,
-//   #542a0b,
-//   #47340b,
-//   #3a3a15,
-//   #2f3f23,
-//   #294131
-// );
+$darkaura: radial-gradient(
+  circle at 50% 50%,
+  #620141,
+  #660a29,
+  #601c17,
+  #542a0b,
+  #47340b,
+  #3a3a15,
+  #2f3f23,
+  #294131
+);

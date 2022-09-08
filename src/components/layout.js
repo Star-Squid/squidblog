@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react"
+import React, { createContext, useState, useEffect } from "react"
 import Navigation from "./navigation"
 import Header from "./header"
 import Footer from "./footer"
@@ -9,27 +9,31 @@ export const ThemeContext = createContext(null)
 export default function Layout(props) {
   const [theme, setTheme] = useState("light")
 
+  useEffect(() => {
+    setTheme(window.localStorage.getItem("theme"))
+    document.body.classList = theme
+  }, [])
+
+  useEffect(() => {
+    window.localStorage.setItem("theme", theme)
+  }, [theme])
+
   const toggleTheme = () => {
+    window.localStorage.setItem("theme", theme)
     setTheme(current => (current === "light" ? "dark" : "light"))
   }
-
-  // useEffect(() => {
-  //   setTheme(JSON.parse(window.localStorage.getItem('theme')));
-  // }, []);
-
-  // useEffect(() => {
-  //   window.localStorage.setItem('theme', theme);
-  // }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div className="container" id={theme}>
-        <Navigation handleClick={toggleTheme} />
-        <div className="column">
-          <Header />
-          <div className="content">
-            {props.children}
-            <Footer />
+        <div className="container2">
+          <Navigation handleClick={toggleTheme} />
+          <div className="column">
+            <Header />
+            <div className="content">
+              {props.children}
+              <Footer />
+            </div>
           </div>
         </div>
       </div>

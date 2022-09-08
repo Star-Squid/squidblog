@@ -19,77 +19,42 @@ html {
 body {
   width: 100vw;
   min-height: 100vh;
-  margin-left: -0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $white;
-  background: url("../images/transparent-grain.png"), $aura;
+  background-color: $grey;
   overflow-x: hidden;
   font-family: "IBM Plex Sans", sans-serif;
   color: $black;
   font-size: $regular;
-  scrollbar-width: thin;
-  scrollbar-color: $thumbBG $scrollbarBG;
-}
-
-
-
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  border: 1px solid $grey;
-  border-radius: 0 0 0.5rem 0;
-  background-color: $halfgrey;
-
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: stretch;
-}
-
-#dark nav {
-
-  border-right: 1px solid $white;
-  border-bottom: 1px solid $white;
-  background-color: $black;
-  color: $white;
-
-  a{
-    color: $white;
-  }
-}
-
-header {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-hr {
-  border: 1px solid $grey;
-  border-width: 1px 0 0;
-  margin: 0;
 }
 
 .container {
-  width: 98%;
-  height: 98%;
-  padding: 1rem;
+  width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+.container2 {
+  margin: auto;
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  background: url("../images/transparent-grain.png"), $aura;
+}
+
+#dark .container2 {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 1rem;
+  background: url("../images/transparent-grain-dark.png"), $darkaura;
 }
 
 .column {
   margin: 0 auto;
-  width: 100%;
-
-  max-width: 750px;
+  width: 90%;
+  max-width: 800px;
   padding: 0 0 2rem;
-
   display: flex;
   flex-flow: column nowrap;
   min-height: 95vh;
@@ -110,7 +75,44 @@ hr {
   padding: 1rem;
 
   flex-grow: 1;
+}
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid $grey;
+  border-radius: 0 0 0.5rem 0;
+  background-color: $halfgrey;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#dark nav {
+  border-right: 1px solid $white;
+  border-bottom: 1px solid $white;
+  background-color: $black;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+}
+
+header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hr {
+  border: 1px solid $grey;
+  border-width: 1px 0 0;
+  margin: 0;
 }
 
 #dark .content {
@@ -124,30 +126,13 @@ hr {
 
 h1 {
   font-family: "Julius Sans One", sans-serif;
-  font-size: calc($regular + 4vw);
+  font-size: calc($regular + 3vw);
   margin: 2rem;
 }
 
 h2 {
   margin: 2rem 0;
 }
-
-// .post-nav {
-//   display: flex;
-//   justify-content: space-between;
-// }
-// .move {
-//   border-radius: 0.5rem;
-//   padding: 0.5rem;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .move:hover {
-//   cursor: pointer;
-//   background-image: $lightglint;
-// }
 
 footer {
   width: 100%;
@@ -181,16 +166,6 @@ a:active {
 #dark a:active {
   color: $main;
 }
-
-
-
-// .singlepost {
-//   background-color: var(--halfgrey);
-// }
-
-// .singlepost:hover {
-//   background-image: var(--glint);
-// }
 
 ul {
   list-style-position: inside;
