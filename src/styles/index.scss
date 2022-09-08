@@ -40,14 +40,14 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background: url("../images/transparent-grain.png"), $aura;
+  background: url("../images/transparent-grain.webp"), $aura;
 }
 
 #dark .container2 {
   width: 100vw;
   min-height: 100vh;
   padding: 1rem;
-  background: url("../images/transparent-grain-dark.png"), $darkaura;
+  background: url("../images/transparent-grain-dark.webp"), $darkaura;
 }
 
 .column {
