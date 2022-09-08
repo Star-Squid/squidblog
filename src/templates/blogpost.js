@@ -26,9 +26,9 @@ export default function BlogPost(props) {
     <Layout>
       <div>
         <PostDate>{props.data.contentfulBlogPost.publishedDate}</PostDate>
-        <h2 className={blogPostStyles.title}>
+        <h3 className={blogPostStyles.title}>
           {titleCase(props.data.contentfulBlogPost.title)}
-        </h2>
+        </h3>
         <p className={blogPostStyles.body}>
           {documentToReactComponents(
             JSON.parse(props.data.contentfulBlogPost.body.raw)

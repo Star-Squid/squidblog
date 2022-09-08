@@ -6,7 +6,7 @@ export default function AboutPage() {
   return (
     <Layout>
       <div>
-        <h2>FAQ:</h2>
+        <h3>FAQ:</h3>
         <ul>
           <li>
             Why is it called Star Squid Blog?

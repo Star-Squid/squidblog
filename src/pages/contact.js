@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <Layout>
       <div>
-        <h2>Visit me elsewhere:</h2>
+        <h3>Visit me elsewhere:</h3>
         <ul>
           <li>
             <a href="https://star-squid.github.io/">Web Portfolio</a>

@@ -8,7 +8,7 @@ const NotFound = () => {
   return (
     <Layout>
       <div className={NotFoundStyles.notfound}>
-        <h2>404: Page Not Found</h2>
+        <h3>404: Page Not Found</h3>
         <p>
           <Link to="/">return to home page</Link>
         </p>

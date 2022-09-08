@@ -26,7 +26,7 @@ export default function IndexPage() {
 
   return (
     <Layout>
-      <h3>Latest posts</h3>
+      <h2>Latest posts</h2>
 
       {data.allContentfulBlogPost.edges.map(edge => {
         return (
@@ -34,7 +34,7 @@ export default function IndexPage() {
             <Link to={`/blog/${edge.node.slug}`}>
               <div className={postStyles.singlepost}>
                 <p>{edge.node.publishedDate}</p>
-                <h2>{titleCase(edge.node.title)}</h2>
+                <h3>{titleCase(edge.node.title)}</h3>
               </div>
             </Link>
           </div>

@@ -16,17 +16,14 @@
     width: 100%;
     margin-top: 1rem;
     background: $halfgrey;
-    // background: red;
-
   }
 
   .singlepost:hover {
     cursor: pointer;
     background-image: $glint;
-    // background: green;
   }
 
-  .singlepost h2 {
+  .singlepost h3 {
     margin: 0;
   }
 }
