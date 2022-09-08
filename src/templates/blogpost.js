@@ -6,6 +6,7 @@ import { graphql } from "gatsby"
 import * as blogPostStyles from "./blogpoststyles.module.scss"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Seo } from "../components/seo"
+import { titleCase } from "../helpers/titlecase"
 
 //needed to target each individual post (target by the known slug)
 export const query = graphql`
@@ -26,7 +27,7 @@ export default function BlogPost(props) {
       <div>
         <PostDate>{props.data.contentfulBlogPost.publishedDate}</PostDate>
         <h2 className={blogPostStyles.title}>
-          {props.data.contentfulBlogPost.title}
+          {titleCase(props.data.contentfulBlogPost.title)}
         </h2>
         <p className={blogPostStyles.body}>
           {documentToReactComponents(
@@ -39,6 +40,6 @@ export default function BlogPost(props) {
   )
 }
 
-export const Head = (props) => (
+export const Head = props => (
   <Seo title={props.data.contentfulBlogPost.title + " - Star Squid Blog"} />
 )

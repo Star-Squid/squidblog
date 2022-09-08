@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 import * as postStyles from "../components/poststyles.module.scss"
 import { Seo } from "../components/seo"
+import { titleCase } from "../helpers/titlecase"
 
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
@@ -27,27 +28,20 @@ export default function IndexPage() {
     <Layout>
       <h3>Latest posts</h3>
 
-
-        {data.allContentfulBlogPost.edges.map(edge => {
-          
-          return (
-            <div className={postStyles.vignette}>
+      {data.allContentfulBlogPost.edges.map(edge => {
+        return (
+          <div className={postStyles.vignette}>
             <Link to={`/blog/${edge.node.slug}`}>
               <div className={postStyles.singlepost}>
-               
-                  <p>{edge.node.publishedDate}</p>
-                  <h2>{edge.node.title}</h2>
-                
+                <p>{edge.node.publishedDate}</p>
+                <h2>{titleCase(edge.node.title)}</h2>
               </div>
             </Link>
-            </div>
-          )
-        })}
- 
+          </div>
+        )
+      })}
     </Layout>
   )
 }
 
-export const Head = () => (
-  <Seo />
-)
+export const Head = () => <Seo />

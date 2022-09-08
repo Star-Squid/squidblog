@@ -16,6 +16,8 @@
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^15.13.1",
     "@contentful/rich-text-types": "^15.12.1",
+    "contentful": "^9.1.34",
+    "contentful-management": "^10.13.0",
     "dotenv": "^16.0.1",
     "gatsby": "^4.20.0",
     "gatsby-plugin-image": "^2.20.0",
@@ -25,6 +27,7 @@
     "gatsby-source-contentful": "^7.18.0",
     "gatsby-transformer-remark": "^5.20.0",
     "react": "^18.1.0",
+    "react-commentbox": "^3.0.1",
     "react-dom": "^18.1.0",
     "sass": "^1.54.4"
   },
