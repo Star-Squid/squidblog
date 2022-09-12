@@ -26,6 +26,7 @@
     "gatsby-plugin-sharp": "^4.20.0",
     "gatsby-source-contentful": "^7.18.0",
     "gatsby-transformer-remark": "^5.20.0",
+    "netlify-lambda": "^2.0.15",
     "react": "^18.1.0",
     "react-commentbox": "^3.0.1",
     "react-dom": "^18.1.0",

@@ -21,6 +21,41 @@ export const query = graphql`
   }
 `
 
+
+
+// ...........
+
+import React from 'react';
+import { createClient } from 'contentful';
+
+import '../styles/App.css';
+import MyCommentBox from './MyCommentBox.jsx';
+
+const fakeBlogPostId = 'my-blog-post';
+
+const postData = (url, data) => {
+
+    return fetch(`.netlify/functions${url}`, {
+        body: JSON.stringify(data),
+        headers: {
+            'content-type': 'application/json'
+        },
+        method: 'POST',
+        //mode: 'cors' // if your endpoints are on a different domain
+    }).then(response => response.json());
+};
+
+const contentfulClient = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+    host: process.env.CONTENTFUL_HOST
+});
+
+
+
+//............
+
+
 export default function BlogPost(props) {
   return (
     <Layout>
@@ -36,6 +71,15 @@ export default function BlogPost(props) {
         </p>
       </div>
       {/* <PostNav></PostNav> */}
+
+      <div>
+            <MyCommentBox
+                subjectId={fakeBlogPostId}
+                postData={postData}
+                contentfulClient={contentfulClient}
+            />
+        </div>
+
     </Layout>
   )
 }
