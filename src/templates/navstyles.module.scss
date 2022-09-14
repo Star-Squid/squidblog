@@ -1,0 +1,29 @@
+@import "../styles/vars.scss";
+
+a {
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.post-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.older {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 40%;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.newer {
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 40%;
+  align-items: flex-start;
+  text-align: left;
+}
