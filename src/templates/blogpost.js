@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import PostDate from "./postdate"
 import PostNav from "./postnav"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 import * as blogPostStyles from "./blogpoststyles.module.scss"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Seo } from "../components/seo"
@@ -43,16 +43,23 @@ export default function BlogPost(props) {
   }
 
   var oldnode, newnode
+  var last = false
+  var first = false
+
   if (thisPostNode === 0) {
     newnode = 0
+    first = true
   } else {
     newnode = thisPostNode - 1
+    first = false
   }
 
   if (thisPostNode === numberOfPosts - 1) {
     oldnode = numberOfPosts - 1
+    last = true
   } else {
     oldnode = thisPostNode + 1
+    last = false
   }
 
   var oldslug = props.data.allContentfulBlogPost.nodes[oldnode].slug
@@ -79,6 +86,8 @@ export default function BlogPost(props) {
       </div>
 
       <PostNav
+        last={last}
+        first={first}
         oldslug={oldslug}
         newslug={newslug}
         oldtitle={oldtitle}
