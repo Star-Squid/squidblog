@@ -35,8 +35,8 @@ export default function Navigation({ handleClick }) {
         </Link>
       </div>
       <hr />
-      <div className={navigationStyles.navItem}>
-        <h2 onClick={handleClick} tabindex={0} aria-label="Toggle dark mode" title="Toggle dark mode">
+      <div className={navigationStyles.navItem} onClick={handleClick} tabIndex={0} aria-label="Toggle dark mode" title="Toggle dark mode">
+        <h2>
           ☀
         </h2>
       </div>
