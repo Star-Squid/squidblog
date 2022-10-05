@@ -19,6 +19,12 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+          shortname: `star-squid-blog`
+      }
+  },
     `gatsby-plugin-image`,
     `gatsby-transformer-remark`,
     {

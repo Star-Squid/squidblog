@@ -10,6 +10,9 @@ import { Seo } from "../components/seo"
 import { titleCase } from "../helpers/titlecase"
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types'
+import { Disqus } from 'gatsby-plugin-disqus';
+
+
 
 //needed to target each individual post (target by the known slug)
 export const query = graphql`
@@ -143,7 +146,21 @@ export default function BlogPost(props) {
   var oldtitle = props.data.allContentfulBlogPost.nodes[oldnode].title
   var newtitle = props.data.allContentfulBlogPost.nodes[newnode].title
 
-  
+  // disqus configuration
+  const disqusShortName = 'star-squid-blog'
+  const disqusConfig = {
+      identifier: props.data.contentfulBlogPost.slug,
+      title: props.data.contentfulBlogPost.title,
+      url: 'https://magnificent-griffin-60d663.netlify.app/blog/' + props.data.contentfulBlogPost.slug, 
+  }
+
+//   config = {
+//     /* Replace PAGE_URL with your post's canonical URL variable */
+//     url: {"https://magnificent-griffin-60d663.netlify.app/"},
+//     /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+//     identifier: "/blog/" + {props.data.contentfulBlogPost.slug},
+//     title: {props.data.contentfulBlogPost.title},
+// }
 
   return (
     <Layout>
@@ -177,6 +194,10 @@ export default function BlogPost(props) {
         oldtitle={oldtitle}
         newtitle={newtitle}
       />
+
+<hr className={blogPostStyles.hr}/>
+<Disqus  shortname={disqusShortName} config={disqusConfig} />
+
     </Layout>
   )
 }

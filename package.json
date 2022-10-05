@@ -20,6 +20,7 @@
     "contentful-management": "^10.13.0",
     "dotenv": "^16.0.1",
     "gatsby": "^4.20.0",
+    "gatsby-plugin-disqus": "^1.2.4",
     "gatsby-plugin-image": "^2.20.0",
     "gatsby-plugin-manifest": "^4.21.0",
     "gatsby-plugin-sass": "^5.20.0",

@@ -12,7 +12,7 @@ export default function PostNav(props) {
           <Link to={`/blog/${props.newslug}`}>
             ← newer
             <br />
-            {props.newtitle}
+            <strong>{props.newtitle}</strong>
           </Link>
         </div>
       )}
@@ -23,7 +23,7 @@ export default function PostNav(props) {
         <div className={navStyles.older}>
           <Link to={`/blog/${props.oldslug}`}>
             older →<br />
-            {props.oldtitle}
+            <strong>{props.oldtitle}</strong>
           </Link>
         </div>
       )}

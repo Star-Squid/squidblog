@@ -17,3 +17,18 @@
   .body {
     margin-bottom: 2rem;
   }
+
+  .hr{
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    width: 100%;
+    text-align: center;
+    padding: 0.1rem;
+    margin: 1rem 0;
+  }
+
+  .disqus{
+    background-color: $grey;
+    color: red;
+    border: solid 2px red;
+  }
